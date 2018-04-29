@@ -1,0 +1,30 @@
+<!-- <div class="container">
+  <div class="border">
+    <app-weather></app-weather><br>
+  </div>
+</div> -->
+<div class="row">
+<div class=" col-xs-12">
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navabar-header">
+			<a href="#" class="navbar-brand">#Project</a>
+		</div>
+		<div>
+			<ul class="nav navbar-nav">
+				<li><a routerLink="todo">Todo</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<ng-template [ngIf]="!authService.isAuthenticated()">
+					<li><a routerLink="login">Login</a></li>
+					<li><a routerLink="register">Register</a></li>
+				</ng-template>
+				<li class="cursor"><a  (click)="logout()" *ngIf="authService.isAuthenticated()">
+				Logout</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<router-outlet></router-outlet>
+</div>
+</div>

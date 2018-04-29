@@ -1,0 +1,3 @@
+<h1>Welcome To user</h1>
+<div *ngFor=" let role of roles | async ">{{role.name}}</div>
+<button class="btn btn-primary" (click)="logout()">LogOut</button>

@@ -1,0 +1,26 @@
+<div class="container">
+	<div class="col-xs-5 col-md-offset-2">
+		<h3>Register</h3> 
+		<form (ngSubmit)="signUp(f) " #f="ngForm">
+			<div class="form-group">
+				<label for="name">Name</label>
+				<input type="text" name="name" placeholder="Enter The Full Name" 
+				class="form-control" id="name" ngModel required>
+			</div>
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="email" name="email" placeholder="Enter The Email" 
+				class="form-control" id="email" ngModel required>
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input type="password" name="password" placeholder="Enter The password" 
+				class="form-control" id="password" ngModel required>
+			</div>
+			<input type="checkbox" name="admin" value="admin" 
+			ngModel required> Enter as a admin<br>
+			<button  class="btn btn-primary" >Register</button>
+			<a routerLink="/login">Cancel</a>
+		</form>
+	</div>
+</div>
